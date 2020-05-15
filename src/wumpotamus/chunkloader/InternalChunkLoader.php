@@ -14,7 +14,7 @@ use pocketmine\world\World;
 /**
  * @internal
  */
-class InternalChunkLoader implements ChunkLoader{
+class InternalChunkLoader implements ChunkListener, ChunkLoader{
 	/** @var World */
 	private $world;
 	/** @var int */
