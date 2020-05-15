@@ -6,7 +6,7 @@ namespace wumpotamus\chunkloader;
 
 use pocketmine\level\Level;
 
-final class RegionLoader{
+final class ChunkRegion{
 	
 	public static function onChunkGenerated(Level $level, int $chunkX, int $chunkZ, callable $callback) : void{
 		if($level->isChunkPopulated($chunkX, $chunkZ)){

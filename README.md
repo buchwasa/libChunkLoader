@@ -14,11 +14,11 @@ Here's an example of how to use it:
 
 use pocketmine\Player;
 use pocketmine\math\Vector3;
-use wumpotamus\chunkloader\RegionLoader;
+use wumpotamus\chunkloader\ChunkRegion;
 
 class ExampleTeleport{
 	public function teleport(Player $player, int $x, int $z){
-        RegionLoader::onChunkGenerated($player->getLevel(), $x, $z, function() use($player, $x, $z){
+        ChunkRegion::onChunkGenerated($player->getLevel(), $x, $z, function() use($player, $x, $z){
             $player->teleport(new Vector3($x, $player->getLevel()->getHighestBlockAt($x, $z), $z));
         });
     }
