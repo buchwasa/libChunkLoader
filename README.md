@@ -1,0 +1,26 @@
+### libChunkLoader
+
+**Notice: This actually was created by [muqsit](https://github.com/muqsit), I've only gone and made it a virion.**
+
+## What is libChunkLoader?
+libChunkLoader is a library that loads a chunk and keeps it loaded until you've done what you've need to do.<br>
+For instance, say I want to teleport a player to the highest block in my task. The highest block in an unloaded chunk is -1, because, well it's an unloaded chunk.<br>
+Using libChunkLoader, I can load that chunk to tell me what the highest block actually is and teleport the player to it.
+
+## How can I use libChunkLoader?
+Here's an example of how to use it:
+```php
+<?php
+
+use pocketmine\Player;
+use pocketmine\math\Vector3;
+use wumpotamus\chunkloader\RegionLoader;
+
+class ExampleTeleport{
+	public function teleport(Player $player, int $x, int $z){
+        RegionLoader::onChunkGenerated($player->getLevel(), $x, $z, function() use($player, $x, $z){
+            $player->teleport(new Vector3($x, $player->getLevel()->getHighestBlockAt($x, $z), $z));
+        });
+    }
+}
+```
