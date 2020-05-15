@@ -18,7 +18,7 @@ use wumpotamus\chunkloader\ChunkRegion;
 
 class ExampleTeleport{
 	public function teleport(Player $player, int $x, int $z){
-        ChunkRegion::onChunkGenerated($player->getLevel(), $x, $z, function() use($player, $x, $z){
+        ChunkRegion::onChunkGenerated($player->getLevel(), $x >> 4, $z >> 4, function() use($player, $x, $z){
             $player->teleport(new Vector3($x, $player->getLevel()->getHighestBlockAt($x, $z), $z));
         });
     }
