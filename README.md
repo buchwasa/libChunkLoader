@@ -8,7 +8,7 @@ For instance, say I want to teleport a player to the highest block in my task. T
 Using libChunkLoader, I can load that chunk to tell me what the highest block actually is and teleport the player to it.
 
 ## How can I use libChunkLoader?
-Here's an example of how to use it:
+Here is an example of how to use it:
 ```php
 <?php
 
