@@ -1,0 +1,6 @@
+name: libChunkLoader
+version: 1.0.0
+antigen: wumpotamus\chunkloader
+api: 3.0.0
+authors: [Wumpotamus]
+description: Keeps chunks loaded for plugin use.
