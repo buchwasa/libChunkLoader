@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace wumpotamus\chunkloader;
+namespace muqsit\chunkloader;
 
 use pocketmine\level\Level;
 
