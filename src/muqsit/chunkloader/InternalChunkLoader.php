@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace wumpotamus\chunkloader;
+namespace muqsit\chunkloader;
 
 use pocketmine\math\Vector3;
 use pocketmine\world\ChunkListener;

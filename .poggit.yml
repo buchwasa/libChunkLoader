@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Wumpotamus/libChunkLoader
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/stephen-mc-pl/libChunkLoader
 branches:
 - master
 - "4.0"

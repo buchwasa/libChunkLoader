@@ -17,9 +17,15 @@ use pocketmine\player\Player;
 use wumpotamus\chunkloader\ChunkRegion;
 
 class ExampleTeleport{
+<<<<<<< HEAD
 	public function teleport(Player $player, int $x, int $z){
         ChunkRegion::onChunkGenerated($player->getWorld(), $x >> 4, $z >> 4, function() use($player, $x, $z){
             $player->teleport(new Vector3($x, $player->getWorld()->getHighestBlockAt($x, $z), $z));
+=======
+    public function teleport(Player $player, int $x, int $z){
+        ChunkRegion::onChunkGenerated($player->getLevel(), $x >> 4, $z >> 4, function() use($player, $x, $z){
+            $player->teleport(new Vector3($x, $player->getLevel()->getHighestBlockAt($x, $z), $z));
+>>>>>>> 89cffd3e8630b29959641e7e82149290ef2a8cba
         });
     }
 }
