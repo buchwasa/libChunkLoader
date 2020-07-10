@@ -14,7 +14,7 @@ Here is an example of how to use it:
 
 use pocketmine\Player;
 use pocketmine\math\Vector3;
-use wumpotamus\chunkloader\ChunkRegion;
+use muqsit\chunkloader\ChunkRegion;
 
 class ExampleTeleport{
     public function teleport(Player $player, int $x, int $z){
