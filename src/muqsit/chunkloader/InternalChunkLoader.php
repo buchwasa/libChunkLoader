@@ -26,7 +26,7 @@ class InternalChunkLoader implements ChunkLoader{
 	private $callback;
 
 	public function __construct(Level $level, int $chunkX, int $chunkZ, callable $callback){
-		$this->position = Position::fromObject(new Vector3($chunkX << 4, $chunkZ << 4), $level);
+		$this->position = Position::fromObject(new Vector3($chunkX << 4, 0, $chunkZ << 4), $level);
 		$this->x = $chunkX;
 		$this->z = $chunkZ;
 		$this->loaderId = Level::generateChunkLoaderId($this);
