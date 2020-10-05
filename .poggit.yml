@@ -1,6 +1,6 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/buchwasa/libChunkLoader
 branches:
-- master
+- main
 - pm4
 projects:
   libChunkLoader:
