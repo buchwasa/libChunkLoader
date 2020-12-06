@@ -31,16 +31,14 @@ class InternalChunkLoader implements ChunkListener, ChunkLoader{
 		$this->callback = $callback;
 	}
 
-	public function onChunkLoaded(Chunk $chunk) : void{
+	public function onChunkLoaded(int $chunkX, int $chunkZ, Chunk $chunk) : void{
 		if(!$chunk->isPopulated()){
-			$this->world->populateChunk((int) $this->getX(), (int) $this->getZ());
-
 			return;
 		}
 		$this->onComplete();
 	}
 
-	public function onChunkPopulated(Chunk $chunk) : void{
+	public function onChunkPopulated(int $chunkX, int $chunkZ, Chunk $chunk): void{
 		$this->onComplete();
 	}
 
@@ -58,12 +56,12 @@ class InternalChunkLoader implements ChunkListener, ChunkLoader{
 		return $this->z;
 	}
 
-	public function onChunkChanged(Chunk $chunk) : void{
+	public function onChunkChanged(int $chunkX, int $chunkZ, Chunk $chunk) : void{
 	}
 
 	public function onBlockChanged(Vector3 $block) : void{
 	}
 
-	public function onChunkUnloaded(Chunk $chunk) : void{
+	public function onChunkUnloaded(int $chunkX, int $chunkZ, Chunk $chunk) : void{
 	}
 }
