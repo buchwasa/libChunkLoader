@@ -1,0 +1,6 @@
+parameters:
+	level: max
+	paths:
+		- src
+	bootstrapFiles:
+		- ./pocketmine/vendor/autoload.php
