@@ -43,8 +43,8 @@ class InternalChunkLoader implements ChunkListener, ChunkLoader{
 	}
 
 	public function onComplete() : void{
-		$this->world->unregisterChunkLoader($this, $this->getX(), $this->getZ());
-		$this->world->unregisterChunkListener($this, $this->getX(), $this->getZ());
+		$this->world->unregisterChunkLoader($this, $this->x, $this->z);
+		$this->world->unregisterChunkListener($this, $this->x, $this->z);
 		($this->callback)();
 	}
 
