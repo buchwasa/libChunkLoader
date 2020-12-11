@@ -1,5 +1,5 @@
 ### libChunkLoader
-
+![CI](https://github.com/buchwasa/libChunkLoader/workflows/CI/badge.svg)<br>
 **Notice: This actually was created by [muqsit](https://github.com/muqsit), I've only gone and made it a virion.**
 
 ## What is libChunkLoader?
