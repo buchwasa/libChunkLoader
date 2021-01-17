@@ -8,7 +8,6 @@ use pocketmine\math\Vector3;
 use pocketmine\world\ChunkListener;
 use pocketmine\world\ChunkLoader;
 use pocketmine\world\format\Chunk;
-use pocketmine\world\Position;
 use pocketmine\world\World;
 
 /**

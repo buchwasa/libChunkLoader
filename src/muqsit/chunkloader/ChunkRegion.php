@@ -18,6 +18,6 @@ final class ChunkRegion{
 
 		$world->registerChunkListener($chunkLoader, $chunkX, $chunkZ);
 		$world->registerChunkLoader($chunkLoader, $chunkX, $chunkZ, true);
-		$world->populateChunk($chunkX, $chunkZ);
+		$world->orderChunkPopulation($chunkX, $chunkZ);
 	}
 }
