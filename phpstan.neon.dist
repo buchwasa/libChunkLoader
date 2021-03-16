@@ -1,6 +1,6 @@
 parameters:
 	level: max
 	paths:
-		- source/src
+		- src
 	bootstrapFiles:
 		- vendor/autoload.php
