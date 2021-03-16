@@ -1,7 +1,15 @@
 {
     "name": "buchwasa/libchunkloader",
+    "description": "Chunk loading library for PocketMine-MP",
     "type": "library",
+    "authors": [
+        {
+            "name": "Muqsit Rayyan",
+            "role": "Developer"
+        }
+    ],
     "require": {
+        "php": "^7.2 || ^8.0",
         "pocketmine/pocketmine-mp": "dev-master"
     },
     "require-dev": {
