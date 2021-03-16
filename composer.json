@@ -1,0 +1,17 @@
+{
+    "name": "buchwasa/libchunkloader",
+    "type": "library",
+    "require": {
+        "pocketmine/pocketmine-mp": "dev-master"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "0.12.x-dev"
+    },
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "muqsit\\": "src/"
+        }
+    }
+}
