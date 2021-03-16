@@ -11,21 +11,14 @@ jobs:
       - name: Download PHP
         uses: wei/curl@master
         with:
-          args: -o php.zip '"https://dev.azure.com/pocketmine/a29511ba-1771-4ad2-a606-23c00a4b8b92/_apis/build/builds/348/artifacts?artifactName=Linux&api-version=6.0&%24format=zip"'
+          args: -o php.zip 'https://dev.azure.com/pocketmine/a29511ba-1771-4ad2-a606-23c00a4b8b92/_apis/build/builds/381/artifacts?artifactName=Linux&api-version=6.0&%24format=zip'
       - run: unzip php.zip
       - run: tar -xzvf Linux/PHP_Linux-x86_64.tar.gz 
-      - name: Clone PocketMine
-        uses: actions/checkout@v2
-        with:
-          repository: 'pmmp/PocketMine-MP'
-          path: 'pocketmine'
-          ref: 'master'
-          submodules: true
       - name: Get Composer
         uses: wei/wget@v1
         with:
           args: https://getcomposer.org/composer-stable.phar -O composer.phar
-      - name: Install PocketMine Dependencies
-        run: ./bin/php7/bin/php composer.phar install --prefer-dist --no-interaction --working-dir=pocketmine
+      - name: Install Dependencies
+        run: ./bin/php7/bin/php composer.phar install --prefer-dist --no-interaction
       - name: Run PHPStan
-        run: ./pocketmine/vendor/bin/phpstan analyze --no-progress
+        run: ./vendor/bin/phpstan analyze --no-progress
