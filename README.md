@@ -1,4 +1,22 @@
 ### libChunkLoader
+### Notice: As of the newer PM4 builds, this library has become useless:
+*Using a teleport example*<br>
+Instead of
+```php
+    ChunkRegion::onChunkGenerated($player->getWorld(), $x >> 4, $z >> 4, function() use($player, $x, $z){
+           $player->teleport(new Vector3($x, $player->getWorld()->getHighestBlockAt($x, $z), $z));
+    });
+```
+Do
+```php
+    $player->getWorld()->orderChunkPopulation($x >> 4, $z >> 4, null)->onCompletion(function() use($player) : void{
+        $player->teleport(new Vector3($x, $player->getWorld()->getHighestBlockAt($x, $z), $z));
+    },
+    static function(): void{
+        //Handle an error here.
+    }
+```
+
 ![CI](https://github.com/buchwasa/libChunkLoader/workflows/CI/badge.svg)<br>
 **Notice: This actually was created by [muqsit](https://github.com/muqsit), I've only gone and made it a virion.**
 
